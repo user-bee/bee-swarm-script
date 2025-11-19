@@ -1,0 +1,23 @@
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+local stats = player.CoreStats
+
+local fieldPos = {
+	dandelion = {
+		pos1 = Vector3.new(-103, 4, 255.5),
+		pos2 = Vector3.new(39, 4, 184.5)
+	},
+	sunflower = {
+		pos1 = Vector3.new(-251, 4, 239),
+		pos2 = Vector3.new(-173, 4, 108.5)
+	}
+}
+
+local field = "dandelion"
+local f = fieldPos[field]
+
+local midpoint = (f.pos1 + f.pos2) / 2
+--print(character.HumanoidRootPart.Position)
+
+--character:MoveTo(midpoint)
